@@ -12,7 +12,7 @@ reader = easyocr.Reader(['en'])
 
 
 ################################## HYPERPARAMETERS ############################
-path_to_image = "./datanam.jpg"
+path_to_image = "./test_images/datanam.jpg"
 one_line_space = 80
 ###############################################################################
 
@@ -42,7 +42,7 @@ def preprocess():
         n = int(diff[i]/one_line_space)
         for i in range (n):
             ans.append(" ")
-    with open("work.csv", 'w') as myfile:
+    with open("output.csv", 'w') as myfile:
         wr = csv.writer(myfile)
         wr.writerow(ans)
     return ans
